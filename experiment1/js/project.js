@@ -28,7 +28,48 @@ function main() {
 
   // call a method on the instance
   myInstance.myMethod();
+
+  const fillers = {
+    person: ["Friend", "Buddy", "Champion", "Legend", "Star", "Rockstar", "Icon", "Superstar", "Inspiration"],
+    action: ["crushed", "nailed", "slayed", "rocked", "smashed", "owned", "dominated", "aced", "killed"],
+    compliment: ["amazing", "incredible", "outstanding", "next-level", "mind-blowing", "epic", "fantastic", "unbelievable", "inspiring"],
+    reward: ["likes", "hearts", "shares", "followers", "cheers", "kudos", "comments", "high-fives", "support"],
+    encouragement: ["give us more of this, please","keep shining", "keep doing your thing","keep it up", "you got this", "don't forget us when you're famous","stay awesome", "never stop", "keep going", "you got this", "keep slaying", "don’t stop now"]
+  };
+  
+  const template = `$person, you absolutely $action it! 
+  
+  This is truly $compliment, and I’m sure you'll get a lot of $reward. Love it, $encouragement!`;
+  
+  
+  // STUDENTS: You don't need to edit code below this line.
+  
+  const slotPattern = /\$(\w+)/;
+  
+  function replacer(match, name) {
+    let options = fillers[name];
+    if (options) {
+      return options[Math.floor(Math.random() * options.length)];
+    } else {
+      return `<UNKNOWN:${name}>`;
+    }
+  }
+  
+  function generate() {
+    let story = template;
+    while (story.match(slotPattern)) {
+      story = story.replace(slotPattern, replacer);
+    }
+  
+    /* global box */
+    box.innerText = story;
+  }
+  
+  /* global clicker */
+  clicker.onclick = generate;
+  
+  generate();
 }
 
 // let's get this party started - uncomment me
-//main();
+main();
