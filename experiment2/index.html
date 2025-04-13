@@ -66,12 +66,15 @@
 
 			<div class="minor-section">
 				<h2>Technical</h2>
-				<p>I layered multiple mountain shaped polygons (generated with vertex shapes and procedural noise) to create atmospheric depth. Each mountain layer is assigned different noise scales, vertical offsets, and HSB color attributes (hue, saturation, brightness, alpha). The clouds are drawn separately on an off-screen createGraphics buffer using thresholded noise values for a natural, evolving cloud shape that drifts over time. Vertical color interpolation (lerpColor) is used to draw a smooth gradient sky.</p>
+				<p>I layered multiple mountain shaped polygons (generated with vertex shapes and procedural noise) to create atmospheric depth. Each mountain layer is assigned different noise scales, vertical offsets, and HSB color attributes (hue, saturation, brightness, alpha). The clouds are drawn separately on an off-screen createGraphics buffer using thresholded noise values for a natural, evolving cloud shape. The clouds drift across the canvas overtime by incrementing cloudOffsetX and cloudOffsetY inside the draw() function. Vertical color interpolation (lerpColor) is used to draw a smooth gradient sky.</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Reflection</h2>
-				<p>Each person that worked on the code should reflect on the process, the difficulties, and the successes of the experiment.</p>
+				<p>There were many amazing inspirational images to choose from, but ultimately I was attracted to this image for its calming aesthetic. In the spirit of abstraction and preserving the soothing mood of the image, I tried to preserve the overall compostition of the image and the colors, but added some life with the slow moving clouds. 
+					My biggest challenges with this project were adding the appropritate contraints to the generated shapes and creating the clouds, but these are the aspects that sell the piece so it was worth the struggle.
+					I was able to overcome these challenges by consulting public forums and reference guides to learn about potential solutions, then I applied them to my code and adjusted until I was happy with the outcome.
+				</p>
 			</div>
 
 		</section>
