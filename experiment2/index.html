@@ -2,7 +2,7 @@
 <html>
 <head>
 	<!-- This title is used for tabs and bookmarks -->
-	<title>Experiment X - Subject/Topic</title>
+	<title>Experiment 02</title>
 
 	<!-- Use UTF character set, a good idea with any webpage -->
 	<meta charset="UTF-8" />
@@ -32,7 +32,7 @@
 	<main id="content">
 		<section>
 
-			<h1>Experiment X - Subject/Topic</h1>
+			<h1>Experiment 02 - Living Impressions</h1>
 
 			<div class="minor-section">
 				<div id="canvas-container">
@@ -45,12 +45,28 @@
 
 			<div class="minor-section">
 				<h2>Description</h2>
-				<p>What are you trying to acomplish with this experiment?</p>
+				<p>This project offers a generative, living impression of this inspiring image:
+				</p>
+				<!-- Display the JPG image -->
+  				<img src="foggy_mountains.jpg" alt="Photograph of foggy mountains by Daniel Seßler" style="max-width: 100%; height: auto;">
+
+				<!-- Clickable text below the image -->
+				<p style="text-align: center; margin-top: 20px;"> Photograph of a foggy mountain range by 
+					<a href="https://unsplash.com/@danielsessler" target="_blank">Daniel Seßler</a>
+				</p>
+				<p><br>Relation to inspring image:<br><br>
+
+					- Color: The sky, mountains, and cloud colors were sampled from the inspiring image.<br>
+					- Primitives: The clouds are rendered with `ellipse` primitives.<br>
+					- Polygons: All mountains are randomly generated polygons made using `vertex` calls with different constraints.<br>
+					- Composition: Different random values lead to differently shaped mountains and differently positioned clouds each time the page is loaded.<br>
+					- Life: The clouds are animated overtime to simulate the natural slow drift of fog in the mountains. Much like in real life, the fog moves across the upper part of the mountain peaks. 
+				</p>
 			</div>
 
 			<div class="minor-section">
 				<h2>Technical</h2>
-				<p>Describe in detail what you did technically and how it works?</p>
+				<p>I layered multiple mountain shaped polygons (generated with vertex shapes and procedural noise) to create atmospheric depth. Each mountain layer is assigned different noise scales, vertical offsets, and HSB color attributes (hue, saturation, brightness, alpha). The clouds are drawn separately on an off-screen createGraphics buffer using thresholded noise values for a natural, evolving cloud shape that drifts over time. Vertical color interpolation (lerpColor) is used to draw a smooth gradient sky.</p>
 			</div>
 
 			<div class="minor-section">
