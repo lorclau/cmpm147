@@ -139,7 +139,7 @@ function drawSmallTriangleMountain() {
 function drawSkyGradient() {
   for (let y = 0; y < height; y++) {
     let inter = map(y, 0, height, 0, 1);
-    let skyColor = lerpColor(color(210, 50, 100), color(220, 60, 70), inter);
+    let skyColor = lerpColor(color(210, 40, 90), color(220, 50, 60), inter); //decrease saturation
     stroke(skyColor);
     line(0, y, width, y);
   }
