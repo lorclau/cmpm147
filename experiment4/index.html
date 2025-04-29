@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- This title is used for tabs and bookmarks -->
+	<title>Experiment 4</title>
+
+	<!-- Use UTF character set, a good idea with any webpage -->
+	<meta charset="UTF-8" />
+	<!-- Set viewport so page remains consistently scaled w narrow devices -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- Include CSS file, including a site-wide CSS and for this particular page -->
+	<link rel="stylesheet" type="text/css" href="../css/site.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!-- Load jQuery library -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+	<!-- Load p5.js library -->
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.9.2/lib/p5.js"></script>
+	<!-- Link to javascript files - DEFER waits until all elements are rendered -->
+    <script type="text/javascript" src="../js/site.js" DEFER></script>
+
+	<!--   <script src="js/xxhash.min.js" defer></script>
+    <script src="js/engine.js" defer></script>
+    <script src="js/my_world.js" defer></script>>    -->
+
+	<!-- Use me for a p5.js project -->
+	<script type="text/javascript" src="./js/sketch.js" DEFER></script>
+
+</head>
+<body>
+	<!-- Style this page by changing the CSS in ../css/site.css or css/experiment.css -->
+	<main id="content">
+		<section>
+
+			<h1>Experiment 4 - Infinite Pieces</h1>
+
+			<div class="minor-section">
+				<div id="canvas-container">
+					<!-- canvas will be added here -->
+				</div>
+                <div class="fullscreen-box">
+                    <button id="fullscreen">Fullscreen</button>
+                </div>
+			</div>
+
+			<div class="minor-section">
+				<h2>Description</h2>
+				<p>The image above is a preview. See the full working project  
+  					<a href="https://infinite-pieces.glitch.me" target="_blank">here</a>. <br><br>
+					The goal for this project: create an infinite world. But I like to think outside the box! So, instead of an infinite world with grass and trees, this is an infinite puzzle. Imagine entertainment that never ends and an infinite set of puzzles. Enter any world key to generate your unique puzzle, use the arrow keys to scroll, and click to place different puzzle pieces. Can you complete this puzzle?
+					<br><br>
+					Tileset Credit: <a href="https://maellemarylloup.itch.io/puzle-tileset-isometric-material" target="_blank">Puzzle Tileset</a> by maellemarylloup
+				</p>
+			</div>
+
+			<div class="minor-section">
+				<h2>Technical</h2>
+				<p>Infinity: <br>
+					I used the infinite extent of my world to represent a never-ending puzzle. This puzzle is the ultimate challenge because it has an infinite amount of puzzle pieces.
+					The goal of any puzzle is to connect all the pieces and form the final image, but what happens when the there is no image and an infinite amount of pieces? Endless entertainment or wasted time, you tell me.
+					
+					<br><br>Variation in Space:<br>
+					As the audience browses my world, they’ll see 80 different puzzle pieces in different configurations, some already connected, some that are placed incorrectly.
+					
+					<br><br>Variation in Key:<br>
+					Depending on the world key input, you will get a different puzzle layout. Each puzzle will place different puzzle pieces and
+					some will be more complete than others (more pre-connected pieces).
+					Since the tile placement allows for overlapping, this means that some worlds will also create unique-looking puzzle pieces only found in that world. 
+					
+					<br><br>Signs of Life:<br>
+					Clicking tiles causes the tiles to change into a different puzzle piece, allowing users to gradually complete the puzzle.
+					Hovering over a tile and scrolling through the puzzle triggers a subtle animation, lifting the selected piece to highlight it from the rest of the puzzle. </p>
+			</div>
+
+			<div class="minor-section">
+				<h2>Reflection</h2>
+				<p>This is my take on an infinite "world" and I am quite happy with the results despite the challenges.
+					I wanted to create a world that doesn't use grass and trees to show the potential of infinite generation. </p>
+			</div>
+
+		</section>
+		<nav id="links" class="minor-section">
+			<!-- Put link back to homepage here. -->
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+            </ul>
+		</nav>
+	</main>
+</body>
+</html>
