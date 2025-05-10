@@ -4,13 +4,13 @@
 function getInspirations() {
   return [
     {
-      name: "Apple", 
-      assetUrl: "img/3.png",
+      name: "Avocado", 
+      assetUrl: "img/2.png",
       credit: "www.canva.com"
     },
     {
-      name: "Avocado", 
-      assetUrl: "img/2.png",
+      name: "Apple", 
+      assetUrl: "img/3.png",
       credit: "www.canva.com"
     },
     {
@@ -22,21 +22,6 @@ function getInspirations() {
 }
 
 function initDesign(inspiration) {
-
-  //canvas
-  // set the canvas size based on the container
-  let canvasContainer = $('.image-container'); // Select the container using jQuery
-  let canvasWidth = canvasContainer.width(); // Get the width of the container
-  let aspectRatio = inspiration.image.height / inspiration.image.width;
-  let canvasHeight = canvasWidth * aspectRatio; // Calculate the height based on the aspect ratio
-  resizeCanvas(canvasWidth, canvasHeight);
-  $(".caption").text(inspiration.credit); // Set the caption text
-
-  // add the original image to #original
-  const imgHTML = `<img src="${inspiration.assetUrl}" style="width:${canvasWidth}px;">`
-  $('#original').empty();
-  $('#original').append(imgHTML);
-
   let shapeCount = 200; // Increased number of shapes for better detail
   let design = {
     ellipses: []
