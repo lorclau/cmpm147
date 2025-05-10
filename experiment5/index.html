@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- This title is used for tabs and bookmarks -->
+	<title>Experiment 5</title>
+
+	<!-- Use UTF character set, a good idea with any webpage -->
+	<meta charset="UTF-8" />
+	<!-- Set viewport so page remains consistently scaled w narrow devices -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- Include CSS file, including a site-wide CSS and for this particular page -->
+	<link rel="stylesheet" type="text/css" href="../css/site.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!-- Load jQuery library -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+	<!-- Load p5.js library -->
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.9.2/lib/p5.js"></script>
+
+	<!-- Link to javascript files - DEFER waits until all elements are rendered -->
+    <script type="text/javascript" src="../js/site.js" DEFEsR></script>
+	<!-- Use me for a p5.js project -->
+	<script type="text/javascript" src="./js/mydesign.js" DEFER></script>
+	<script type="text/javascript" src="./js/sketch.js" DEFER></script>
+</head>
+<body>
+	<!-- Style this page by changing the CSS in ../css/site.css or css/experiment.css -->
+	<main id="content">
+		<section>
+
+			<h1>Experiment 5 - Evolutionary Impressions</h1>
+
+			<div class="minor-section results">
+                <div class="results-top">
+                    <div class="image-container">
+                        <p id="original"></p>
+                        <p class="caption"></p>
+                    </div>
+                    <div class="image-container">
+                        <p id="active"></p>
+                        <p>Active Image</p>
+                    </div>
+                    <div class="image-container">
+                        <p id="best"></p>
+                        <p>Best Image</p>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <div class="controls-col1">
+                        <select id="dropper"></select>
+                        <button id="restart">
+                        restart
+                        </button>
+                        <p>
+                        Mutation rate (<span id="rate"></span>%):<br /><input
+                            id="slider"
+                            type="range"
+                            min="1"
+                            max="100"
+                            value="100"
+                        />
+                        </p>
+                    </div>
+                    <div class="controls-col2">
+                        <p>Active score: <span id="activeScore"></span></p>
+                        <p>Exploration rate: <span id="fpsCounter"></span> fps</p>
+                        <p>Best score: <span id="bestScore"></span></p>
+                    </div>
+                </div>
+
+                <div class="results-bottom">
+                    <p id="memory" data-max-items="10"></p>
+                </div>
+			</div>
+
+			<div class="minor-section">
+				<h2>Description</h2>
+				<p style="font-size: 20px; text-align: center;">
+					If this project does not appear to be working properly, 
+					Click <a href="https://glitch.com/edit/#!/evolutionary-impressions-remix" target="_blank">here</a> to view the Glitch code. 
+					Click <a href="https://evolutionary-impressions-remix.glitch.me" target="_blank">here</a> to view the Glitch Project.
+				  </p>
+				  <p style="text-align: center;">This generator directly reads inspiring images (black and white silhouettes of fruit), renders parameterized images, and adjusts its designs to optimize an evaluation score.</p>				  
+			</div>
+
+			<div class="minor-section">
+				<h2>Technical</h2>
+                <ol>
+                    <li>This project integrates inspiring images that are selectable from the drop-down on the display page. (This could be three distinct images or one image with three different sets of clues that cause the generator to interpret it in a different way.)</li>
+                    <li>The design object is initialized in inspiration-specific ways. Selecting different inspirations should lead to different behaviors of initDesign.</li>
+                    <li>The design is rendered in a way that can possibly produce results that feel related to the inspiring images. (The 30-second annealing trick should produce images that resemble the inspiring image if we squint.)</li>
+                    <li>The mutation process makes incremental changes to your design. The rate parameter should be implemented in a way that allows the user to almost stop exploration by sliding the rate down to 1%. Your generator must respond to the mutation rate slider.</li>
+                </ol>
+			</div>
+
+			<div class="minor-section">
+				<h2>Reflection</h2>
+				<p>I set out to make an enjoyable visual evolution whose results would be easily identifiable, and I think I was able to achieve that.
+					I am happy with the results of this project and how much detail the generator is able to capture.
+                    The most challenging part was making constant adjustments to ensure that each image was generated well overtime.
+                    I had to make sure I didn’t get caught up in the details by spending too much time making small adjustments.
+                    To prevent this, I would ask a friend to identify the image, once they identified it correctly I knew it was a good time to stop.
+</p>
+			</div>
+
+		</section>
+		<nav id="links" class="minor-section">
+			<!-- Put link back to homepage here. -->
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+            </ul>
+		</nav>
+	</main>
+</body>
+</html>
